@@ -12,7 +12,7 @@ class Request
     {
         $this->get = new Parameter($_GET);
         $this->post = new Parameter($_POST);
-        $this->session = $_SESSION;
+        $this->session = new Session($_SESSION);
     }
 
     /**
@@ -32,7 +32,7 @@ class Request
     }
 
     /**
-     * @return mixed
+     * @return Session
      */
     public function getSession()
     {
