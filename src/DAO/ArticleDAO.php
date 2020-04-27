@@ -1,6 +1,13 @@
 <?php
 
-class Article extends Database
+//Pour toutes les classes dans DAO
+namespace App\src\DAO;
+
+//Uniquement pour la classe DAO
+use PDO;
+use Exception;
+
+class ArticleDAO extends DAO
 {
     public function getArticles()
     {
