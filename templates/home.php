@@ -1,6 +1,5 @@
 <?php
-require '../src/DAO/DAO.php';
-require '../src/DAO/ArticleDAO.php';
+require '../vendor/autoload.php';
 
 use App\src\DAO\ArticleDAO;
 ?>
