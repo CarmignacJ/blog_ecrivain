@@ -1,4 +1,4 @@
-<?php $this->title = "Article"; ?>
+<?php $this->title = 'Article'; ?>
 <h1>Mon blog</h1>
 <p>En construction</p>
 <div>
@@ -10,6 +10,7 @@
 <br>
 <div class="actions">
     <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
+    <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
 </div>
 <br>
 <a href="../public/index.php">Retour à l'accueil</a>
