@@ -25,6 +25,11 @@ class Comment
     private $createdAt;
 
     /**
+     * @var bool
+     */
+    private $flag;
+
+    /**
      * @return int
      */
     public function getId()
@@ -86,5 +91,21 @@ class Comment
     public function setCreatedAt($createdAt)
     {
         $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isFlag()
+    {
+        return $this->flag;
+    }
+
+    /**
+     * @param bool $flag
+     */
+    public function setFlag($flag)
+    {
+        $this->flag = $flag;
     }
 }

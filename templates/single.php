@@ -26,6 +26,18 @@
         <p><?= htmlspecialchars($comment->getContent());?></p>
         <p>Posté le <?= htmlspecialchars($comment->getCreatedAt());?></p>
         <?php
+        if($comment->isFlag()) {
+            ?>
+            <p>Ce commentaire a déjà été signalé</p>
+            <?php
+        } else {
+            ?>
+            <p><a href="../public/index.php?route=flagComment&commentId=<?= $comment->getId(); ?>">Signaler le commentaire</a></p>
+            <?php
+        }
+        ?>
+        <br>
+        <?php
     }
     ?>
 </div>
