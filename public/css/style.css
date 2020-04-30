@@ -1,0 +1,58 @@
+/* ---------------------------------------- */
+/* ==       ÉLÉMENTS PRINCIPAUX         */
+/*---------------------------------------- */
+
+/*   POLICE   */
+@font-face {
+    font-family: "SnellRoundhandW01-Script"; 
+    src: url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.eot"); 
+    src: url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.eot?#iefix") format("embedded-opentype"), 
+        url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.woff2") format("woff2"), 
+        url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.woff") format("woff"), 
+        url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.ttf") format("truetype"), 
+        url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.svg#SnellRoundhandW01-Script") format("svg"); } 
+
+
+
+body
+{
+    font-family: SnellRoundhandW01-Script;
+    font-size: 30px;
+}
+        
+
+img
+{
+	width: 100%;
+	height: auto;
+}
+
+#bloc_page
+{
+    max-width: 1440px;
+    margin: auto;
+    background-color: #dedcd0;
+}
+
+.form_log_reg
+{
+    text-align: center;
+}
+
+input
+{
+    margin: 15px;
+}
+
+h1
+{
+   margin-left: 150px;
+   margin-top: 50px; 
+}
+
+h2
+{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+}

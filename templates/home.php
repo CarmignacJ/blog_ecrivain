@@ -1,6 +1,33 @@
 <?php $this->title = 'Accueil'; ?>
 
-<h1>Mon blog</h1>
+<div class="carousel slide" data-ride="carousel" id="mycarousel">  <!-- défilement d'image -->
+            
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="img/ecriture.jpg" alt="First slide">    
+        </div>
+
+        <div class="carousel-item">
+            <img class="d-block w-100" src="img/encre.jpg" alt="Second slide"> 
+        </div>
+            
+        <div class="carousel-item">  
+            <img class="d-block w-100" src="img/livre.jpg" alt="Third slide">
+        </div>
+
+    </div>
+
+    <a href="#mycarousel" class="carousel-control-prev" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+        
+    <a href="#mycarousel" class="carousel-control-next"  data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+
+</div>
+
 <p>En construction</p>
 <?= $this->session->show('add_article'); ?>
 <?= $this->session->show('edit_article'); ?>
@@ -29,17 +56,20 @@ if ($this->session->get('pseudo')) {
     <?php
 }
 ?>
-<?php
-foreach ($articles as $article)
-{
-    ?>
-    <div>
-        <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h2>
-        <p><?= htmlspecialchars($article->getContent());?></p>
-        <p><?= htmlspecialchars($article->getAuthor());?></p>
-        <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
+<div class="container">
+    <div class="row">
+        <?php
+        foreach ($articles as $article)
+        {
+            ?>
+            <div class="col-md-4">
+                <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h2>
+                <p><?= htmlspecialchars($article->getContent());?></p>
+                <p><?= htmlspecialchars($article->getAuthor());?></p>
+                <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
+            </div>                
+            <?php
+        }
+        ?>        
     </div>
-    <br>
-    <?php
-}
-?>
+</div>
