@@ -1,31 +1,25 @@
 <?php $this->title = 'Accueil'; ?>
 
-<div class="carousel slide" data-ride="carousel" id="mycarousel">  <!-- défilement d'image -->
-            
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
-
         <div class="carousel-item active">
-            <img class="d-block w-100" src="img/ecriture.jpg" alt="First slide">    
+            <img class="d-block w-100" src="img/paysage.jpg" alt="First slide">
         </div>
-
         <div class="carousel-item">
-            <img class="d-block w-100" src="img/encre.jpg" alt="Second slide"> 
+            <img class="d-block w-100" src="img/randonner.jpg" alt="Second slide">
         </div>
-            
-        <div class="carousel-item">  
-            <img class="d-block w-100" src="img/livre.jpg" alt="Third slide">
+        <div class="carousel-item">
+            <img class="d-block w-100" src="img/montagne.jpg" alt="Third slide">
         </div>
-
     </div>
-
-    <a href="#mycarousel" class="carousel-control-prev" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
     </a>
-        
-    <a href="#mycarousel" class="carousel-control-next"  data-slide="next">
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
     </a>
-
 </div>
 
 <p>En construction</p>
@@ -63,7 +57,7 @@ if ($this->session->get('pseudo')) {
         {
             ?>
             <div class="col-md-4">
-                <h2><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h2>
+                <h1><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h1>
                 <p><?= htmlspecialchars($article->getContent());?></p>
                 <p><?= htmlspecialchars($article->getAuthor());?></p>
                 <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>

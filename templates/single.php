@@ -1,28 +1,38 @@
 <?php $this->title = 'Article'; ?>
-<div>
-    <h2><?= htmlspecialchars($article->getTitle());?></h2>
-    <p><?= htmlspecialchars($article->getContent());?></p>
-    <p><?= htmlspecialchars($article->getAuthor());?></p>
-    <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
-</div>
-<br>
-<div class="actions">
-    <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
-    <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
-</div>
-<br>
-<a href="../public/index.php">Retour à l'accueil</a>
-<div id="comments" class="text-left" style="margin-left: 50px">
-    <h3>Ajouter un commentaire</h3>
-    <?php include('form_comment.php'); ?>
+<div id="page_single">
+    <article class="col-xs-12">
+        <h2><?= htmlspecialchars($article->getTitle());?></h2>
+        <div class="trait"></div>
+        <p><?= htmlspecialchars($article->getContent());?></p>
+        <footer>
+            <h5>
+                <div class="trait"></div>
+                <?= htmlspecialchars($article->getAuthor());?>
+                Créé le : <?= htmlspecialchars($article->getCreatedAt());?>
+            </h5>
+        </footer>
+    </artcile>
+    
     <h3>Commentaires</h3>
+    <div class="trait"></div>
     <?php
     foreach ($comments as $comment)
     {
         ?>
-        <h4><?= htmlspecialchars($comment->getPseudo());?></h4>
-        <p><?= htmlspecialchars($comment->getContent());?></p>
-        <p>Posté le <?= htmlspecialchars($comment->getCreatedAt());?></p>
+        <article class="commentaire">
+            
+            <header>
+                <div class="poste">
+                    <h4><?= htmlspecialchars($comment->getPseudo());?></h4>                   
+                    <h5>Posté le <?= htmlspecialchars($comment->getCreatedAt());?></h5>
+                </div>
+                    <div class="trait_commentaire"></div>
+                <div>
+                    <p><?= htmlspecialchars($comment->getContent());?></p>
+                </div>
+            </header>
+            
+        </article>
         <?php
         if($comment->isFlag()) {
             ?>
@@ -35,8 +45,16 @@
         }
         ?>
         <p><a href="../public/index.php?route=deleteComment&commentId=<?= $comment->getId(); ?>">Supprimer le commentaire</a></p>
-        <br>
+        <div class="trait"></div>
         <?php
     }
     ?>
+
+    <h3>Ajouter un commentaire</h3>
+    <div class="trait"></div>
+    <div class="actions">
+        <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
+        <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
+    </div>
+    <?php include('form_comment.php'); ?>
 </div>

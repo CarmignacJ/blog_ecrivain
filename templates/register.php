@@ -1,5 +1,5 @@
 <?php $this->title = "Inscription"; ?>
-<h1>Insciption</h1>
+<h2>Insciption</h2>
 
 <div class="form_log_reg">
     <form class="center-block" method="post" action="../public/index.php?route=register">

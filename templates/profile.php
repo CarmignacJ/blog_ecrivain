@@ -1,5 +1,5 @@
 <?php $this->title = 'Mon profil'; ?>
-<h1>Mon blog</h1>
+<h2>Mon blog</h2>
 <p>En construction</p>
 <?= $this->session->show('update_password'); ?>
 <div>

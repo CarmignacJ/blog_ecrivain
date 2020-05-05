@@ -1,6 +1,6 @@
 <?php $this->title = "Connexion"; ?>
 <div class="formule">
-    <h1>Connexion</h1>
+    <h2>Connexion</h2>
     <?= $this->session->show('error_login'); ?>
     <div class="form_log_reg">
         <form method="post" action="../public/index.php?route=login">
