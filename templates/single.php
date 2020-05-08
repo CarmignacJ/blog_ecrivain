@@ -52,9 +52,5 @@
 
     <h3>Ajouter un commentaire</h3>
     <div class="trait"></div>
-    <div class="actions">
-        <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
-        <a href="../public/index.php?route=deleteArticle&articleId=<?= $article->getId(); ?>">Supprimer</a>
-    </div>
     <?php include('form_comment.php'); ?>
 </div>

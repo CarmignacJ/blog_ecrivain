@@ -18,9 +18,12 @@ class ArticleDAO extends DAO
         return $article;
     }
 
+/*
+    DATE_FORMAT(date, \'%d/%m/%Y %Hh%imin%ss\') AS date
+*/
     public function getArticles()
     {
-        $sql = 'SELECT article.id, article.title, article.content, user.pseudo, article.createdAt FROM article INNER JOIN user ON article.user_id = user.id ORDER BY article.id DESC';
+        $sql = 'SELECT article.id, article.title, article.content, user.pseudo, article.createdAt FROM article INNER JOIN user ON article.user_id = user.id ORDER BY article.id DESC LIMIT 3';
         $result = $this->createQuery($sql);
         $articles = [];
         foreach ($result as $row){
@@ -39,6 +42,7 @@ class ArticleDAO extends DAO
         $result->closeCursor();
         return $this->buildObject($article);
     }
+    
 
     public function addArticle(Parameter $post, $userId)
     {
@@ -64,4 +68,5 @@ class ArticleDAO extends DAO
         $sql = 'DELETE FROM article WHERE id = ?';
         $this->createQuery($sql, [$articleId]);
     }
+
 }
