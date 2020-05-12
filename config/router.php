@@ -66,6 +66,9 @@ class Router
                 elseif($route === 'logout'){
                     $this->backController->logout();
                 }
+                elseif($route === 'chapter'){
+                    $this->frontController->chapter();
+                }
                 elseif($route === 'deleteAccount'){
                     $this->backController->deleteAccount();
                 }

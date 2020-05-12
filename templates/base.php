@@ -35,6 +35,9 @@
                             <a class="nav-link" href="../public/index.php">Accueil</a>
                         </li>
                         <li class="nav-item active">
+                            <a class="nav-link" href="../public/index.php?route=chapter">Chapitre</a>
+                        </li>
+                        <li class="nav-item active">
                             <a class="nav-link" href="../public/index.php?route=register">Inscription</a>
                         </li>
                         <li class="nav-item active">

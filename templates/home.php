@@ -22,7 +22,7 @@
     </a>
 </div>
 
-<p>En construction</p>
+
 <?= $this->session->show('add_article'); ?>
 <?= $this->session->show('edit_article'); ?>
 <?= $this->session->show('delete_article'); ?>

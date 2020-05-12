@@ -24,6 +24,14 @@ class FrontController extends Controller
         ]);
     }
 
+    public function chapter()
+    {
+        $articles = $this->articleDAO->chapter();
+        return $this->view->render('chapter', [
+            'articles' => $articles    
+        ]);
+    }
+
     public function addComment(Parameter $post, $articleId)
     {
         if($post->get('submit')) {
