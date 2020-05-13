@@ -1,7 +1,7 @@
 <?php $this->title = 'Administration'; ?>
 
-<h1>Mon blog</h1>
-<p>En construction</p>
+<div id="page_single">
+<div class="trait"></div>
 <?= $this->session->show('add_article'); ?>
 <?= $this->session->show('edit_article'); ?>
 <?= $this->session->show('delete_article'); ?>
@@ -9,6 +9,7 @@
 <?= $this->session->show('delete_comment'); ?>
 <?= $this->session->show('delete_user'); ?>
 <h2>Articles</h2>
+<div class="trait"></div>
 <a href="../public/index.php?route=addArticle">Nouvel article</a>
 <table>
     <tr>
@@ -38,8 +39,9 @@
     }
     ?>
 </table>
-
+<div class="trait"></div>
 <h2>Commentaires signalés</h2>
+<div class="trait"></div>
 <table>
     <tr>
         <td>Id</td>
@@ -66,8 +68,9 @@
     }
     ?>
 </table>
-
+<div class="trait"></div>
 <h2>Utilisateurs</h2>
+<div class="trait"></div>
 <table>
     <tr>
         <td>Id</td>
@@ -103,3 +106,4 @@
     }
     ?>
 </table>
+</div>

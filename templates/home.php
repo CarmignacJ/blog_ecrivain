@@ -33,6 +33,7 @@
 <?= $this->session->show('login'); ?>
 <?= $this->session->show('logout'); ?>
 <?= $this->session->show('delete_account'); ?>
+
 <?php
 if ($this->session->get('pseudo')) {
     ?>
@@ -42,28 +43,30 @@ if ($this->session->get('pseudo')) {
         <a href="../public/index.php?route=administration">Administration</a>
     <?php } ?>
     <a href="../public/index.php?route=addArticle">Nouvel article</a>
-    <?php
-} else {
+    <?php }
     ?>
-    <a href="../public/index.php?route=register">Inscription</a>
-    <a href="../public/index.php?route=login">Connexion</a>
-    <?php
-}
-?>
-<div class="container">
-    <div class="row">
-        <?php
-        foreach ($articles as $article)
-        {
-            ?>
-            <div class="col-md-4">
-                <h1><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h1>
-                <p><?= htmlspecialchars($article->getContent());?></p>
-                <p><?= htmlspecialchars($article->getAuthor());?></p>
-                <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
-            </div>                
+ 
+<div id="page_single">
+<h2>Mes Derniers chapitres</h2> 
+    <div class="container">
+        <div class="row">
             <?php
-        }
-        ?>        
-    </div>
+            foreach ($articles as $article)
+            {
+                ?>
+                <article class="col-md-4">
+                    <header>
+                        <h1><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></h1>
+                    </header>
+                    <p><?= substr(htmlspecialchars($article->getContent()), 0, 200);?>...</p>
+                    <footer>
+                        <p><?= htmlspecialchars($article->getAuthor());?></p>
+                        <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
+                    </footer>
+                </article>             
+                <?php
+            }
+            ?>
+        </div>        
+    </div>   
 </div>

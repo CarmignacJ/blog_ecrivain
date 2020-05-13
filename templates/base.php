@@ -17,15 +17,15 @@
     <div id="bloc_page">
 
         <header class="navbar navbar-expand-md navbar-dark bg-dark">
+    
             <a href="../public/index.php" class="navbar-brand"> <!-- intégration logo -->
-            <i class="fas fa-feather-alt"></i>
-            
+                <h1>Billet simple pour l'Alaska</h1>
             </a>
-            
+
            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-content"> <!-- activation bouton -->
                 <span class="navbar-toggler-icon"></span> <!-- icone bouton -->
+    
             </button>
-
 
             <div class="collapse navbar-collapse justify-content-end" id="navbar-content">
                     

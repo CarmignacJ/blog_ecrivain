@@ -27,10 +27,10 @@
                     <h5>Posté le <?= htmlspecialchars($comment->getCreatedAt());?></h5>
                 </div>
                     <div class="trait_commentaire"></div>
-                <div>
-                    <p><?= htmlspecialchars($comment->getContent());?></p>
-                </div>
             </header>
+            <footer>
+                    <p><?= htmlspecialchars($comment->getContent());?></p>
+            </footer>
             
         </article>
         <?php
