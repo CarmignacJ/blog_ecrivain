@@ -1,7 +1,7 @@
 <?php $this->title = "Connexion"; ?>
 
 <div class="formule">
-    <div id="page_single">
+    <div id="page_garde">
         <h3 class="text-center pt-5">Connexion</h3>
         <div class="container">
             <div id="login-row" class="row justify-content-center align-items-center">

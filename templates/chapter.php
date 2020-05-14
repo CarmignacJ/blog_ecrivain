@@ -1,6 +1,6 @@
 <?php $this->title = "Chapitre"; ?>
 
-<div id="page_single">
+<div id="page_garde">
 <h2>Les Chapitres</h2>
     <div class="container">
         <div class="row">

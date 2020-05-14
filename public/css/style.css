@@ -2,18 +2,6 @@
 /* ==       ÉLÉMENTS PRINCIPAUX         */
 /*---------------------------------------- */
 
-/*   POLICE   */
-@font-face {
-    font-family: "SnellRoundhandW01-Script"; 
-    src: url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.eot"); 
-    src: url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.eot?#iefix") format("embedded-opentype"), 
-        url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.woff2") format("woff2"), 
-        url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.woff") format("woff"), 
-        url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.ttf") format("truetype"), 
-        url("//db.onlinewebfonts.com/t/f8deb3c1a029ec56b15bb462c1518f07.svg#SnellRoundhandW01-Script") format("svg"); } 
-
-
-
 body
 {
     font-family: Georgia, serif;
@@ -33,16 +21,9 @@ img
     background-color: #dedcd0;
 }
 
-header
+#page_garde
 {
-    text-align: center;
-    padding-bottom: 20px;
-
-}
-
-.form_log_reg
-{
-    text-align: center;
+    padding: 35px 50px 35px 50px;
 }
 
 h1
@@ -58,6 +39,44 @@ h2
     margin-bottom: 50px;
 }
 
+/* ---------------------------------------- */
+/* ==              HEADER                   */
+/*---------------------------------------- */
+
+header
+{
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+.trait
+{
+    border: solid black 1px;
+    margin: 20px 0px 20px 0px;
+}
+
+
+/* ---------------------------------------- */
+/* ==              PAGE                   */
+/*---------------------------------------- */
+
+/*   PAGE   */
+.trait
+{
+    border: solid black 1px;
+    margin: 20px 0px 20px 0px;
+}
+
+
+/*   ARTICLE   */
+article footer h5
+{
+    font-size: 15px;
+    text-align: right;
+}
+
+/*   CHAPITRE   */
 .container
 {
     margin-bottom: 50px;
@@ -68,29 +87,14 @@ div.col-md-4 p
 {
     text-align: center;
 }
+
 div.col-md-4 h2
 {
     margin-bottom: 30px;
 }
 
 
-.trait
-{
-    border: solid black 1px;
-    margin: 20px 0px 20px 0px;
-}
-
-#page_single
-{
-    padding: 35px 50px 35px 50px;
-}
-
-article footer h5
-{
-    font-size: 15px;
-    text-align: right;
-}
-
+/*   COMMENTAIRE   */
 .commentaire
 {
     border: solid black 1px;
@@ -118,7 +122,27 @@ article footer h5
     font-style: italic;
 }
 
+
+/*   ADMINISTRATION   */
+table h2                                              
+{
+    text-align: center;
+    margin-bottom: 0px;
+}
+
 table td
 {
     padding-left: 25px;
+}
+
+
+/*   PAGE ERREUR   */
+.error-details
+{
+    text-align: center;
+}
+
+.error-actions
+{
+    text-align: center;
 }

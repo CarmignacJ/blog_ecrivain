@@ -46,8 +46,8 @@ if ($this->session->get('pseudo')) {
     <?php }
     ?>
  
-<div id="page_single">
-<h2>Mes Derniers chapitres</h2> 
+<div id="page_garde">
+    <h2>Mes Derniers chapitres</h2> 
     <div class="container">
         <div class="row">
             <?php

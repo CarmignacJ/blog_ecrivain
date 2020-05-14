@@ -30,7 +30,7 @@ class BackController extends Controller
     public function administration()
     {
         if($this->checkAdmin()) {
-            $articles = $this->articleDAO->getArticles();
+            $articles = $this->articleDAO->chapter();
             $comments = $this->commentDAO->getFlagComments();
             $users = $this->userDAO->getUsers();
 

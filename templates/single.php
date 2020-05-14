@@ -1,5 +1,6 @@
 <?php $this->title = 'Article'; ?>
-<div id="page_single">
+
+<div id="page_garde">
     <article class="col-xs-12">
         <h2><?= htmlspecialchars($article->getTitle());?></h2>
         <div class="trait"></div>
