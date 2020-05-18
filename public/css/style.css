@@ -5,6 +5,7 @@
 body
 {
     font-family: Georgia, serif;
+    background-color: #dedcd0;
 }
         
 
@@ -12,13 +13,6 @@ img
 {
 	width: 100%;
 	height: auto;
-}
-
-#bloc_page
-{
-    max-width: 1440px;
-    margin: auto;
-    background-color: #dedcd0;
 }
 
 #page_garde
@@ -120,6 +114,14 @@ div.col-md-4 h2
 {
     font-size: 13px;
     font-style: italic;
+}
+
+/*   FOOTER  */
+.page-footer
+{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
 }
 
 

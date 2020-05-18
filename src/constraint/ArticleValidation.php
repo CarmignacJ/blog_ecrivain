@@ -8,11 +8,13 @@ class ArticleValidation extends Validation
     private $errors = [];
     private $constraint;
 
+    /* Créer un nouvel objet basé sur la classe Contraint */
     public function __construct()
     {
         $this->constraint = new Constraint();
     }
 
+    /* Récupérer toutes les données de la classe Parameter */
     public function check(Parameter $post)
     {
         foreach ($post->all() as $key => $value) {
@@ -21,6 +23,7 @@ class ArticleValidation extends Validation
         return $this->errors;
     }
 
+    /*  Vérifier chaque champ */
     private function checkField($name, $value)
     {
         if($name === 'title') {
@@ -33,6 +36,7 @@ class ArticleValidation extends Validation
         }
     }
 
+    /*  Ajoutera une erreur si un des champs n'est pas valide */
     private function addError($name, $error) {
         if($error) {
             $this->errors += [
@@ -41,6 +45,7 @@ class ArticleValidation extends Validation
         }
     }
 
+    /*  Vont faire appels aux différentes contraines créées */
     private function checkTitle($name, $value)
     {
         if($this->constraint->notBlank($name, $value)) {
@@ -54,6 +59,7 @@ class ArticleValidation extends Validation
         }
     }
 
+    /*  Vont faire appels aux différentes contraines créées */
     private function checkContent($name, $value)
     {
         if($this->constraint->notBlank($name, $value)) {

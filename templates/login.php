@@ -1,5 +1,6 @@
 <?php $this->title = "Connexion"; ?>
 
+
 <div class="formule">
     <div id="page_garde">
         <h3 class="text-center pt-5">Connexion</h3>
@@ -11,6 +12,7 @@
                             <div class="form-group">
                                 <label for="username">Pseudo:</label><br>
                                 <input class="form-control" type="text" name="pseudo" id="pseudo" value="<?= isset($post) ? htmlspecialchars($post->get('pseudo')): ''; ?>" placeholder="Entrez votre pseudo" required autofocus />
+                                <?= $this->session->show('error_login'); ?>
                             </div>
                             <div class="form-group">
                                 <label for="password">Mot de passe:</label><br>

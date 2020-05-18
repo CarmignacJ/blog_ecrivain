@@ -35,7 +35,7 @@ class ArticleDAO extends DAO
         return $articles;
     }
 
-    /* obtenir des chapitres */
+    /* obtenir les chapitres */
     public function chapter() 
     {
         $sql = 'SELECT article.id, article.title, article.content, user.pseudo, article.createdAt FROM article INNER JOIN user ON article.user_id = user.id ORDER BY article.id DESC LIMIT 6';
