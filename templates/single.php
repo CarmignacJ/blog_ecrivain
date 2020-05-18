@@ -8,7 +8,6 @@
         <footer>
             <h5>
                 <div class="trait"></div>
-                <?= htmlspecialchars($article->getAuthor());?>
                 Créé le : <?= htmlspecialchars($article->getCreatedAt());?>
             </h5>
         </footer>

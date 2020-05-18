@@ -62,7 +62,6 @@ if ($this->session->get('pseudo')) {
                     </header>
                     <p><?= substr(htmlspecialchars($article->getContent()), 0, 200);?>...</p>
                     <footer>
-                        <p><?= htmlspecialchars($article->getAuthor());?></p>
                         <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
                     </footer>
                 </article>             

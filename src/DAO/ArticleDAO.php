@@ -18,13 +18,11 @@ class ArticleDAO extends DAO
         return $article;
     }
 
-/*
-    DATE_FORMAT(createdAt, \'%d/%m/%Y %Hh%imin%ss\') AS createdAt
-*/  
+  
     /* obtenir des articles */
     public function getArticles() 
     {
-        $sql = 'SELECT article.id, article.title, article.content, user.pseudo, article.createdAt FROM article INNER JOIN user ON article.user_id = user.id ORDER BY article.id DESC LIMIT 3';
+        $sql = 'SELECT article.id, article.title, article.content, user.pseudo, DATE_FORMAT(article.createdAt, \'%d/%m/%Y %Hh%imin%ss\') AS createdAt FROM article INNER JOIN user ON article.user_id = user.id ORDER BY article.id DESC LIMIT 3';
         $result = $this->createQuery($sql);
         $articles = [];
         foreach ($result as $row){
@@ -38,7 +36,7 @@ class ArticleDAO extends DAO
     /* obtenir les chapitres */
     public function chapter() 
     {
-        $sql = 'SELECT article.id, article.title, article.content, user.pseudo, article.createdAt FROM article INNER JOIN user ON article.user_id = user.id ORDER BY article.id DESC LIMIT 6';
+        $sql = 'SELECT article.id, article.title, article.content, user.pseudo, DATE_FORMAT(article.createdAt, \'%d/%m/%Y %Hh%imin%ss\') AS createdAt FROM article INNER JOIN user ON article.user_id = user.id ORDER BY article.id DESC LIMIT 6';
         $result = $this->createQuery($sql);
         $articles = [];
         foreach ($result as $row){
@@ -54,7 +52,7 @@ class ArticleDAO extends DAO
     /* obtenir l'article */
     public function getArticle($articleId)
     {
-        $sql = 'SELECT article.id, article.title, article.content, user.pseudo, article.createdAt FROM article INNER JOIN user ON article.user_id = user.id  WHERE article.id = ?';
+        $sql = 'SELECT article.id, article.title, article.content, user.pseudo, DATE_FORMAT(article.createdAt, \'%d/%m/%Y %Hh%imin%ss\') AS createdAt FROM article INNER JOIN user ON article.user_id = user.id  WHERE article.id = ?';
         $result = $this->createQuery($sql, [$articleId]);
         $article = $result->fetch();
         $result->closeCursor();

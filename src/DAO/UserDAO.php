@@ -17,9 +17,10 @@ class UserDAO extends DAO
         return $user;
     }
 
+    /* obtenir des utilisteurs */
     public function getUsers()
     {
-        $sql = 'SELECT user.id, user.pseudo, user.createdAt, role.name FROM user INNER JOIN role ON user.role_id = role.id ORDER BY user.id DESC';
+        $sql = 'SELECT user.id, user.pseudo, DATE_FORMAT(user.createdAt, \'%d/%m/%Y %Hh%imin%ss\') AS createdAt, role.name FROM user INNER JOIN role ON user.role_id = role.id ORDER BY user.id DESC';
         $result = $this->createQuery($sql);
         $users = [];
         foreach ($result as $row){
@@ -30,6 +31,7 @@ class UserDAO extends DAO
         return $users;
     }
 
+    
     public function register(Parameter $post)
     {
         $this->checkUser($post);

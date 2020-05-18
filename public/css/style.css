@@ -17,7 +17,7 @@ img
 
 #page_garde
 {
-    padding: 35px 50px 35px 50px;
+    padding: 35px 50px 100px 50px;
 }
 
 h1
@@ -62,6 +62,10 @@ header
     margin: 20px 0px 20px 0px;
 }
 
+.container-fluid
+{
+    padding: 0px;
+}
 
 /*   ARTICLE   */
 article footer h5
@@ -131,7 +135,10 @@ table h2
     text-align: center;
     margin-bottom: 0px;
 }
-
+tbody th
+{
+    padding-left: 25px;
+}
 table td
 {
     padding-left: 25px;
@@ -148,3 +155,39 @@ table td
 {
     text-align: center;
 }
+
+
+/* ---------------------------------------- */
+/* ==          MEDIA QUERIES             */
+/*---------------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+    #page_garde
+    {
+        padding: 10px 10px 100px 10px;
+    }
+
+        /* Tableau */
+        tbody th
+        {
+            display: none;
+        }
+        
+        table td
+        {
+            display: flex;
+        }
+    
+        table td
+        {
+            padding: 10px;
+        }
+        td a
+        {
+            padding-right: 10px;
+        }
+        
+    }    
+    
+        /* Fin du Tableau */

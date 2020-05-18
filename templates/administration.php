@@ -13,22 +13,18 @@
     <a href="../public/index.php?route=addArticle">Nouvel article</a>
     <table>
         <tr>
-            <td>Id</td>
-            <td>Titre</td>
-            <td>Contenu</td>
-            <td>Auteur</td>
-            <td>Date</td>
-            <td>Actions</td>
+            <th>Titre</th>
+            <th>Contenu</th>
+            <th>Date</th>
+            <th>Actions</th>
         </tr>
         <?php
         foreach ($articles as $article)
         {
             ?>
             <tr>
-                <td><?= htmlspecialchars($article->getId());?></td>
                 <td><a href="../public/index.php?route=article&articleId=<?= htmlspecialchars($article->getId());?>"><?= htmlspecialchars($article->getTitle());?></a></td>
                 <td><?= substr(htmlspecialchars($article->getContent()), 0, 150);?></td>
-                <td><?= htmlspecialchars($article->getAuthor());?></td>
                 <td>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></td>
                 <td>
                     <a href="../public/index.php?route=editArticle&articleId=<?= $article->getId(); ?>">Modifier</a>
@@ -44,18 +40,16 @@
     <div class="trait"></div>
     <table>
         <tr>
-            <td>Id</td>
-            <td>Pseudo</td>
-            <td>Message</td>
-            <td>Date</td>
-            <td>Actions</td>
+            <th>Pseudo</th>
+            <th>Message</th>
+            <th>Date</th>
+            <th>Actions</th>
         </tr>
         <?php
         foreach ($comments as $comment)
         {
             ?>
             <tr>
-                <td><?= htmlspecialchars($comment->getId());?></td>
                 <td><?= htmlspecialchars($comment->getPseudo());?></td>
                 <td><?= substr(htmlspecialchars($comment->getContent()), 0, 150);?></td>
                 <td>Créé le : <?= htmlspecialchars($comment->getCreatedAt());?></td>
@@ -73,18 +67,16 @@
     <div class="trait"></div>
     <table>
         <tr>
-            <td>Id</td>
-            <td>Pseudo</td>
-            <td>Date</td>
-            <td>Rôle</td>
-            <td>Actions</td>
+            <th>Pseudo</th>
+            <th>Date</th>
+            <th>Rôle</th>
+            <th>Actions</th>
         </tr>
         <?php
         foreach ($users as $user)
         {
             ?>
             <tr>
-                <td><?= htmlspecialchars($user->getId());?></td>
                 <td><?= htmlspecialchars($user->getPseudo());?></td>
                 <td>Créé le : <?= htmlspecialchars($user->getCreatedAt());?></td>
                 <td><?= htmlspecialchars($user->getRole());?></td>

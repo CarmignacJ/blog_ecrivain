@@ -14,7 +14,6 @@
                     </header>
                     <p><?= substr(htmlspecialchars($article->getContent()), 0, 250);?>...</p>
                     <footer>
-                        <p><?= htmlspecialchars($article->getAuthor());?></p>
                         <p>Créé le : <?= htmlspecialchars($article->getCreatedAt());?></p>
                     </footer>
                 </article>                
