@@ -8,7 +8,7 @@ class ArticleValidation extends Validation
     private $errors = [];
     private $constraint;
 
-    /* Créer un nouvel objet basé sur la classe Contraint */
+    /* Créer un nouvel objet basé sur la classe contraintes */
     public function __construct()
     {
         $this->constraint = new Constraint();

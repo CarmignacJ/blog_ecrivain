@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="utf8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <title><?= $title ?></title>
@@ -12,13 +12,17 @@
 
         <!-- Tinymce -->
         <link rel="stylesheet" href="js/tinymce/themes/silver/theme.min.js" />
-
+        
         <script src="js/tinymce/tinymce.min.js"></script>
         <script src="js/tinymce/jquery.tinymce.min.js"></script>
         
         <script>
             tinymce.init({
                 selector: '#mytextarea',
+                language : "fr_FR",
+                height: 500,
+                forced_root_block : '',
+                invalid_elements : 'strong,em,br'
             });
         </script>
 
@@ -46,7 +50,7 @@
                             <a class="nav-link" href="../public/index.php">Accueil</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="../public/index.php?route=chapter">Chapitre</a>
+                            <a class="nav-link" href="../public/index.php?route=chapter">Chapitres</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="../public/index.php?route=register">Inscription</a>

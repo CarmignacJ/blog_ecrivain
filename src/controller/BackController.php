@@ -61,26 +61,6 @@ class BackController extends Controller
         }
     }
 
-    public function addComment(Parameter $post, $articleId)
-    {
-        if($post->get('submit')) {
-            $errors = $this->validation->validate($post, 'Comment');
-            if(!$errors) {
-                $this->commentDAO->addComment($post, $articleId);
-                $this->session->set('add_comment', 'Le nouveau commentaire a bien été ajouté');
-                header('Location: ../public/index.php');
-            }
-            $article = $this->articleDAO->getArticle($articleId);
-            $comments = $this->commentDAO->getCommentsFromArticle($articleId);
-            return $this->view->render('single', [
-                'article' => $article,
-                'comments' => $comments,
-                'post' => $post,
-                'errors' => $errors
-            ]);
-        }
-    }
-
     public function editArticle(Parameter $post, $articleId)
     {
         if($this->checkAdmin()) {

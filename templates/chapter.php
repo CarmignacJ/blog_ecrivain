@@ -1,4 +1,4 @@
-<?php $this->title = "Chapitre"; ?>
+<?php $this->title = "Chapitres"; ?>
 
 <div id="page_garde">
 <h2>Les Chapitres</h2>
