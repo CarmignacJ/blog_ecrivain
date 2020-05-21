@@ -36,7 +36,7 @@ class ArticleDAO extends DAO
     /* obtenir les chapitres */
     public function chapter() 
     {
-        $sql = 'SELECT article.id, article.title, article.content, user.pseudo, DATE_FORMAT(article.createdAt, \'%d/%m/%Y %Hh%imin%ss\') AS createdAt FROM article INNER JOIN user ON article.user_id = user.id ORDER BY article.id DESC';
+        $sql = 'SELECT article.id, article.title, article.content, user.pseudo, DATE_FORMAT(article.createdAt, \'%d/%m/%Y %Hh%imin%ss\') AS createdAt FROM article INNER JOIN user ON article.user_id = user.id ORDER BY article.id DESC LIMIT 10';
         $result = $this->createQuery($sql);
         $articles = [];
         foreach ($result as $row){

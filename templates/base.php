@@ -53,9 +53,6 @@
                             <a class="nav-link" href="../public/index.php?route=chapter">Chapitres</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="../public/index.php?route=register">Inscription</a>
-                        </li>
-                        <li class="nav-item active">
                             <a class="nav-link" href="../public/index.php?route=login">Connexion</a>
                         </li>
                     </ul>
